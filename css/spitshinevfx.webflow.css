@@ -1937,6 +1937,7 @@ figcaption {
 
 .link {
   color: #ffc13c;
+  display: inline-block;
 }
 
 .text-block-8 {
