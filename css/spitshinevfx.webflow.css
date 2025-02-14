@@ -3267,6 +3267,22 @@ figcaption {
     margin-bottom: 60px;
   }
 
+
+/* Base styles - keep your existing .container-5 rules */
+
+/* Add this media query for mobile devices */
+@media screen and (max-width: 767px) {
+  .container-5 {
+    margin-top: 40px;    /* Reduced from 80px */
+    margin-bottom: 30px; /* Reduced from 60px/80px */
+    height: auto;        /* Override the 100% height */
+  }
+  
+  .hero-image {
+    margin-bottom: 0;    /* In case there's any margin on the image */
+  }
+}
+
   .list-item-2 {
     margin-bottom: 10px;
   }
