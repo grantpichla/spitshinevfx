@@ -190,46 +190,48 @@
   <script src="js/webflow.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 
-  document.addEventListener('DOMContentLoaded', function() {
-      const video = document.getElementById('c1c6d514-c496-4cbc-245a-d56fc383ec16-video');
-      
-      // Function to handle autoplay
-      async function attemptPlay() {
-          try {
-              // Ensure video is muted (required by most browsers for autoplay)
-              video.muted = true;
-              
-              // Attempt to play
-              await video.play();
-              
-              // Add event listener to restart video if it ends (backup for loop attribute)
-              video.addEventListener('ended', function() {
-                  video.play();
-              });
-          } catch (err) {
-              // If autoplay fails, try again after user interaction
-              document.addEventListener('click', function() {
-                  video.play();
-              }, { once: true });
-              
-              console.log("Autoplay failed:", err);
-          }
-      }
-      
-      // Try immediate autoplay
-      attemptPlay();
-      
-      // Backup: try again when window loads
-      window.addEventListener('load', function() {
-          attemptPlay();
-      });
-      
-      // Additional backup: try on user scroll
-      window.addEventListener('scroll', function() {
-          if (video.paused) {
-              attemptPlay();
-          }
-      }, { once: true });
-  });
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('c1c6d514-c496-4cbc-245a-d56fc383ec16-video');
+        
+        // Function to handle autoplay
+        async function attemptPlay() {
+            try {
+                // Ensure video is muted (required by most browsers for autoplay)
+                video.muted = true;
+                
+                // Attempt to play
+                await video.play();
+                
+                // Add event listener to restart video if it ends (backup for loop attribute)
+                video.addEventListener('ended', function() {
+                    video.play();
+                });
+            } catch (err) {
+                // If autoplay fails, try again after user interaction
+                document.addEventListener('click', function() {
+                    video.play();
+                }, { once: true });
+                
+                console.log("Autoplay failed:", err);
+            }
+        }
+        
+        // Try immediate autoplay
+        attemptPlay();
+        
+        // Backup: try again when window loads
+        window.addEventListener('load', function() {
+            attemptPlay();
+        });
+        
+        // Additional backup: try on user scroll
+        window.addEventListener('scroll', function() {
+            if (video.paused) {
+                attemptPlay();
+            }
+        }, { once: true });
+    });
+    </script>
 </body>
 </html>
