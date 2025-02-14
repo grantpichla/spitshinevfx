@@ -941,38 +941,33 @@ textarea.w-select {
   overflow: hidden; /* Crucial for cropping */
 }
 
+
 .hero-image {
-  width: 100%; /* Fill the container width */
-  height: 450px; /* Fixed height */
-  object-fit: cover; /* Crop and fill the space */
-  object-position: center center; /* Center the cropped image */
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 
-/* Mobile-specific styles to make it look more square (optional) */
+ /* Mobile adjustments */
 @media (max-width: 767px) {
+  /* Reduce the hero image height */
   .hero-image {
-    height: 450px; /*  Same height on mobile */
+    height: 300px;
   }
-}
 
-/* Style for single responsive image */
-.container-5.homepage {
-  overflow: hidden; /* Crucial for cropping */
-}
+  /* Minimize container spacing */
+  .container-5 {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: auto;
+  }
 
-.hero-image {
-  width: 100%; /* Fill the container width */
-  height: 450px; /* Fixed height */
-  object-fit: cover; /* Crop and fill the space */
-  object-position: center center; /* Center the cropped image */
-}
-
-
-/* Mobile-specific styles to make it look more square (optional) */
-@media (max-width: 767px) {
-  .hero-image {
-    height: 300px; /*  Same height on mobile */
+  /* Reduce section wrap spacing */
+  .home-section-wrap {
+    margin-top: 20px;    /* Reduced from 40px */
+    margin-bottom: 20px; /* Reduced from 30px */
   }
 }
 

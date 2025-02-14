@@ -1428,12 +1428,7 @@ figcaption {
   grid-template-rows: auto auto;
 }
 
-.home-section-wrap {
-  display: block;
-  margin-top: 0px;
-  margin-bottom: 30px;
-  text-align: left;
-}
+
 
 .section-heading {
   margin-top: 80px;
@@ -2058,7 +2053,7 @@ figcaption {
 
 .container-5.homepage {
   min-height: 500px; /* Adjust this value as needed */
-  margin-bottom: 40px;
+  margin-bottom: 2px;
 }
 
 .image-3 {
@@ -2191,6 +2186,7 @@ figcaption {
 
 .container-7 {
   padding-bottom: 0px;
+
 }
 
 .video-2 {
@@ -2465,9 +2461,7 @@ figcaption {
     width: 100%;
   }
 
-  .home-section-wrap {
-    margin-left: auto;
-  }
+
 
   .section-heading {
     margin-left: 20px;
@@ -2726,9 +2720,16 @@ figcaption {
     padding: 30px;
   }
 
-  .home-section-wrap {
-    margin-left: auto;
-  }
+  /* Base styles for desktop */
+.home-section-wrap {
+  display: block;
+  margin: 40px auto 30px auto;  /* Consolidated margins */
+  padding-top: 0;
+  text-align: left;
+  flex: 0 auto;
+}
+
+
 
   .section-heading {
     margin-left: 20px;
@@ -3109,14 +3110,7 @@ figcaption {
     margin-bottom: 60px;
   }
 
-  .home-section-wrap {
-    margin-top: 40px;
-    padding-top: 0px;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 auto;
-    -ms-flex: 0 auto;
-    flex: 0 auto;
-  }
+
 
   .section-heading {
     margin-top: 40px;
@@ -3264,24 +3258,11 @@ figcaption {
 
   .container-5 {
     margin-top: 80px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
 
-/* Base styles - keep your existing .container-5 rules */
 
-/* Add this media query for mobile devices */
-@media screen and (max-width: 767px) {
-  .container-5 {
-    margin-top: 40px;    /* Reduced from 80px */
-    margin-bottom: 30px; /* Reduced from 60px/80px */
-    height: auto;        /* Override the 100% height */
-  }
-  
-  .hero-image {
-    margin-bottom: 0;    /* In case there's any margin on the image */
-  }
-}
 
   .list-item-2 {
     margin-bottom: 10px;
