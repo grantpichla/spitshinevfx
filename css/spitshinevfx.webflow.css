@@ -2057,7 +2057,8 @@ figcaption {
 }
 
 .container-5.homepage {
-  margin-bottom: 0px;
+  min-height: 500px; /* Adjust this value as needed */
+  margin-bottom: 40px;
 }
 
 .image-3 {
@@ -2198,9 +2199,6 @@ figcaption {
   background-size: auto;
 }
 
-.slider-3 {
-  background-color: #000;
-}
 
 .link-block {
   margin-right: auto;
