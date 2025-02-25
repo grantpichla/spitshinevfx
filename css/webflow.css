@@ -1848,9 +1848,13 @@ textarea.w-select {
 }
 
 
-/* Mobile-specific styles to make it look more square (optional) */
+/* Mobile-specific styles to reduce video height */
 @media (max-width: 767px) {
+  .container-5.homepage {
+     height: 250px; /* Mobile height */
+  }
+
   .hero-video {
-     height: 450px; /* Same height on mobile */
+     height: 100%; /* Keep the video filling the container */
   }
 }
