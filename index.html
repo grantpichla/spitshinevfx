@@ -92,7 +92,11 @@
       </div>
     </div>
     <div class="container-5 homepage w-container">
-      <img src="images/light-saber.jpg" alt="Hero Image" class="hero-image">
+      <video class="hero-video" autoplay loop muted playsinline poster="videos/homepage_banner_2_thumbnail.jpg" preload="none">
+         <source data-src="videos/homepage_banner_2.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+      </video>
+   </div>
    </div>
     </div>
     </div>
@@ -220,34 +224,40 @@
         }, { once: true });
     });
     </script>
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', function() {
-          // Force slider refresh after small delay
-          setTimeout(function() {
-              // Try to trigger a window resize to force slider recalculation
-              window.dispatchEvent(new Event('resize'));
-              
-              // Additional check for Webflow
-              if (typeof Webflow !== 'undefined' && Webflow.require('slider')) {
-                  // Reinitialize all sliders
-                  Webflow.require('slider').redraw();
-              }
-          }, 100);
+    
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+         var video = document.querySelector('.hero-video');
+         var options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1
+         };
+   
+         var observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                  var sources = video.querySelectorAll('source');
+                  sources.forEach(source => {
+                     source.src = source.getAttribute('data-src');
+                  });
+                  video.load();
+   
+                  // Ensure the video plays after loading
+                  video.play().catch(error => {
+                     console.error("Video playback failed:", error);
+                  });
+   
+                  observer.unobserve(video); // Stop observing after video is loaded
+               }
+            });
+         }, options);
+   
+         observer.observe(video);
       });
-      </script>
+   </script>
 
-<script>
-  const slider = document.querySelector('.image-slider');
-  const images = slider.querySelectorAll('img');
-  let index = 0;
 
-  function nextSlide() {
-    images[index].style.transform = 'translateX(-100%)'; // Slide out left
-    index = (index + 1) % images.length; // Increment index
-    images[index].style.transform = 'translateX(0)';   // Slide in from right
-  }
-
-  setInterval(nextSlide, 3000); // Change image every 3 seconds
-</script>
 </body>
 </html>
