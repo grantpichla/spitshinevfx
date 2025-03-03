@@ -810,6 +810,10 @@ figcaption {
   background-image: url('../images/soldiers-ready-for-zombies.jpg');
 }
 
+.intro-header.cc-subpage.rotoscope {
+  background-image: url('../images/slider_01.jpg');
+}
+
 .intro-content {
   display: block;
   width: 70%;
@@ -1632,6 +1636,24 @@ figcaption {
   -o-object-fit: contain;
   object-fit: contain;
 }
+
+.service-video {
+  position: relative;
+  width: 100%; /* Stretches the video to the full width */
+  height: 60vh; /* Limits the height to 60% of the viewport */
+  overflow: hidden; /* Ensures that the excess top and bottom are cropped */
+}
+
+.service-video-element {
+  position: absolute;
+  top: 50%; /* Moves the video 50% down */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the video horizontally and vertically */
+  width: 100%; /* Stretches the video edge-to-edge horizontally */
+  height: auto; /* Auto height to maintain aspect ratio */
+  object-fit: cover; /* Crops the top and bottom of the video */
+}
+
 
 .heading {
   font-family: 'Gothic A1', sans-serif;
