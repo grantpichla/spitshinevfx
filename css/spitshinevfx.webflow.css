@@ -798,7 +798,7 @@ figcaption {
 }
 
 .intro-header.cc-subpage.about1 {
-  background-image: url('../images/light-saber-scene.jpg');
+  background-image: url('../images/shaq.jpg');
 }
 
 .intro-header.cc-subpage.contact {
@@ -806,9 +806,7 @@ figcaption {
   background-position: 50% 10%;
 }
 
-.intro-header.cc-subpage.work1 {
-  background-image: url('../images/shaq.jpg');
-}
+
 
 .intro-header.cc-subpage.work1 {
   position: relative;
