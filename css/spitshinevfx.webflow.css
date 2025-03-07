@@ -807,7 +807,22 @@ figcaption {
 }
 
 .intro-header.cc-subpage.work1 {
-  background-image: url('../images/soldiers-ready-for-zombies.jpg');
+  background-image: url('../images/shaq.jpg');
+}
+
+.intro-header.cc-subpage.work1 {
+  position: relative;
+  overflow: hidden;
+  /* You may want to keep other existing styles */
+}
+
+.background-video-work-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the video covers the area like background-size: cover */
 }
 
 .intro-header.cc-subpage.rotoscope {
@@ -3186,6 +3201,10 @@ figcaption {
     margin-left: auto;
   }
 
+
+
+
+  
   .block-quote {
     margin-top: 0px;
     padding-right: 0px;
