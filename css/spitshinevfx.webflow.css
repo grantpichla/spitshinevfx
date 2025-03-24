@@ -264,21 +264,21 @@ figcaption {
 
 .button {
   padding: 18px 30px;
-  border-radius: 0px;
-  background-color: #353840;
+  border-radius: 30px;
+  background-color: #ffda23;
   -webkit-transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
   transition: background-color 400ms ease, opacity 400ms ease, color 400ms ease;
-  color: #fff;
-  font-size: 14px;
+  color: #0a0a0a;
   line-height: 20px;
   letter-spacing: 2px;
   text-decoration: none;
-  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .button:hover {
-  background-color: #32343a;
-  color: #fff;
+  background-color: #d4d4d4;
+  color: #000000;
 }
 
 .button:active {
@@ -287,6 +287,7 @@ figcaption {
 
 .button.cc-jumbo-button {
   position: static;
+  border-radius: 30px;
   left: 0%;
   top: auto;
   right: 0%;
@@ -311,7 +312,7 @@ figcaption {
   grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto auto;
   grid-template-rows: auto auto;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 26px;
   -o-object-fit: fill;
   object-fit: fill;
@@ -319,8 +320,8 @@ figcaption {
 
 .button.cc-jumbo-button.cc-jumbo-white {
   display: inline-block;
-  background-color: #fff;
-  color: #000;
+  background-color: #ffda23;
+  color: #0a0a0a;
 }
 
 .button.cc-jumbo-button.cc-jumbo-white:hover {
@@ -598,7 +599,8 @@ figcaption {
   opacity: 1;
   font-family: 'Gothic A1', sans-serif;
   color: #fff;
-  font-size: 14px;
+  font-size: 16
+  px;
   line-height: 20px;
   font-weight: 900;
   letter-spacing: 1px;
@@ -1710,7 +1712,7 @@ figcaption {
 .text-block-3 {
   padding-top: 2px;
   font-family: 'Gothic A1', sans-serif;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .nav-wrapper {
@@ -1768,7 +1770,8 @@ figcaption {
 
 .text-block-4 {
   padding-top: 2px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .block-quote {
@@ -1979,6 +1982,8 @@ figcaption {
 
 .text-block-8 {
   padding-top: 2px;
+  font-weight: 700;
+ 
 }
 
 .text-block-9 {
@@ -1986,6 +1991,7 @@ figcaption {
   margin-right: auto;
   margin-left: auto;
   padding-top: 2px;
+  font-weight: 700;
 }
 
 .heading-9 {
@@ -2270,6 +2276,9 @@ figcaption {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+
   }
 
   .button.cc-contact-us {

@@ -94,6 +94,10 @@ html.w-mod-touch * {
   text-decoration: none;
   cursor: pointer;
   border-radius: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+ 
 }
 input.w-button {
   -webkit-appearance: button;
