@@ -96,9 +96,16 @@ html.w-mod-touch * {
   border-radius: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 30%;
  
 }
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+  .w-button {
+    width: 100%;
+  }
+}
+
 input.w-button {
   -webkit-appearance: button;
 }
